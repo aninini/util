@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  max-http-header-size: 10240
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.162:3306/exchange?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: li311311
+
+mybatis-plus:
+  mapper-locations: classpath*:com/example/date/**/mapping/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+  global-config:
+    banner: false
+    enable-sql-runner: true
+    db-config:
+      id-type: assign_id
+      table-underline: true
